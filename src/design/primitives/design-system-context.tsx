@@ -1,0 +1,7 @@
+import React from 'react';
+
+import { ColorModeProvider, type ColorMode } from './color-mode';
+
+export function DesignSystemProvider({ children, colorMode }: { children: React.ReactNode; colorMode: ColorMode }) {
+  return <ColorModeProvider value={colorMode}>{children}</ColorModeProvider>;
+}

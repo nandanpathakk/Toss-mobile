@@ -1,0 +1,48 @@
+import React, { useMemo } from 'react';
+
+import { Box, resolveToken, type BoxProps } from './box';
+import { space, type Space } from './space';
+
+type InsetProps = {
+  children: BoxProps['children'];
+  space?: Space;
+  horizontal?: Space;
+  vertical?: Space;
+  top?: Space;
+  bottom?: Space;
+  left?: Space;
+  right?: Space;
+  testId?: string;
+};
+
+/**
+ * @description Renders a container with padding.
+ */
+export function Inset({ space: spaceProp, horizontal, vertical, top, bottom, left, right, children, testId }: InsetProps) {
+  const margin = resolveToken(space, spaceProp);
+  const marginBottom = resolveToken(space, bottom);
+  const marginHorizontal = resolveToken(space, horizontal);
+  const marginLeft = resolveToken(space, left);
+  const marginRight = resolveToken(space, right);
+  const marginTop = resolveToken(space, top);
+  const marginVertical = resolveToken(space, vertical);
+
+  const style = useMemo(
+    () => ({
+      margin,
+      marginBottom,
+      marginHorizontal,
+      marginLeft,
+      marginRight,
+      marginTop,
+      marginVertical,
+    }),
+    [margin, marginBottom, marginHorizontal, marginLeft, marginRight, marginTop, marginVertical]
+  );
+
+  return (
+    <Box style={style} testID={testId}>
+      {children}
+    </Box>
+  );
+}

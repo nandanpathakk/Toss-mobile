@@ -1,0 +1,69 @@
+import React, { Children, Fragment, type ReactElement, type ReactNode } from 'react';
+
+import { alignHorizontalToFlexAlign, alignVerticalToFlexAlign, type AlignHorizontal, type AlignVertical } from './alignment';
+import { Box, resolveToken } from './box';
+import { space as spaceTokens, type Space } from './space';
+
+type InlineProps = {
+  children: ReactNode;
+  alignHorizontal?: AlignHorizontal;
+  alignVertical?: AlignVertical;
+  space?: Space;
+  horizontalSpace?: Space;
+  verticalSpace?: Space;
+  testID?: string;
+} & (
+  | {
+      separator?: undefined;
+      wrap?: true;
+    }
+  | {
+      separator?: ReactElement;
+      wrap: false;
+    }
+);
+
+/**
+ * @description Renders flowing content with equal spacing between items
+ * both horizontally and vertically, wrapping to multiple lines if needed.
+ */
+export function Inline({
+  children,
+  alignHorizontal,
+  alignVertical,
+  space,
+  horizontalSpace: horizontalSpaceProp,
+  verticalSpace: verticalSpaceProp,
+  separator,
+  wrap = true,
+  testID,
+}: InlineProps) {
+  const verticalSpace = verticalSpaceProp ?? space;
+  const horizontalSpace = horizontalSpaceProp ?? space;
+
+  return (
+    <Box
+      alignItems={alignVertical ? alignVerticalToFlexAlign[alignVertical] : undefined}
+      flexDirection="row"
+      flexWrap={wrap ? 'wrap' : undefined}
+      justifyContent={alignHorizontal ? alignHorizontalToFlexAlign[alignHorizontal] : undefined}
+      style={{
+        columnGap: horizontalSpace ? resolveToken(spaceTokens, horizontalSpace) : undefined,
+        rowGap: verticalSpace ? resolveToken(spaceTokens, verticalSpace) : undefined,
+      }}
+      testID={testID}
+    >
+      {wrap || !separator
+        ? children
+        : Children.toArray(children).map((child, index) => {
+            if (!child) return null;
+            return (
+              <Fragment key={index}>
+                {index > 0 && separator}
+                {child}
+              </Fragment>
+            );
+          })}
+    </Box>
+  );
+}

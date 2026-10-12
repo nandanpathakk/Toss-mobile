@@ -1,0 +1,21 @@
+{
+  "src/app/navigation/cool-modals": [
+    "src/app/navigation/cool-modals/create-native-stack-navigator.tsx",
+    "src/app/navigation/cool-modals/ios/RNCMPortal.m",
+    "src/app/navigation/cool-modals/ios/RNCMScreen.h",
+    "src/app/navigation/cool-modals/ios/RNCMScreen.m",
+    "src/app/navigation/cool-modals/ios/RNCMScreenStack.h",
+    "src/app/navigation/cool-modals/ios/RNCMScreenStack.m",
+    "src/app/navigation/cool-modals/ios/UIViewController+slack.swift",
+    "src/app/navigation/cool-modals/native-stack-view.tsx",
+    "src/app/navigation/cool-modals/portal.tsx",
+    "src/app/navigation/cool-modals/screens.tsx"
+  ],
+  "src/lib/react-query": [
+    "src/lib/react-query/create-query-key.ts",
+    "src/lib/react-query/persist-query-client-provider.tsx",
+    "src/lib/react-query/query-client.ts",
+    "src/lib/react-query/react-query-utils.ts",
+    "src/lib/react-query/types.ts"
+  ]
+}

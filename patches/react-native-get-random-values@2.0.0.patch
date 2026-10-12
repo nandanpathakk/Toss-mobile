@@ -1,0 +1,99 @@
+diff --git a/index.js b/index.js
+index ea95358483259a3a44a12c9f6072dc6fe62e3f77..e799206c4cf77d2cf9b90b89916f6b47ad4f62c1 100644
+--- a/index.js
++++ b/index.js
+@@ -4,21 +4,6 @@ const { TurboModuleRegistry } = require('react-native')
+ class TypeMismatchError extends Error {}
+ class QuotaExceededError extends Error {}
+ 
+-let warned = false
+-function insecureRandomValues (array) {
+-  if (!warned) {
+-    console.warn('Using an insecure random number generator, this should only happen when running in a debugger without support for crypto.getRandomValues')
+-    warned = true
+-  }
+-
+-  for (let i = 0, r; i < array.length; i++) {
+-    if ((i & 0x03) === 0) r = Math.random() * 0x100000000
+-    array[i] = (r >>> ((i & 0x03) << 3)) & 0xff
+-  }
+-
+-  return array
+-}
+-
+ let module = null
+ /**
+  * @param {number} byteLength
+@@ -44,38 +29,15 @@ function getRandomValues (array) {
+     throw new QuotaExceededError('Can only request a maximum of 65536 bytes')
+   }
+ 
+-  // Expo SDK 48+
+-  if (global.expo?.modules?.ExpoCrypto?.getRandomValues) {
+-    // ExpoCrypto.getRandomValues doesn't return the array
+-    global.expo.modules.ExpoCrypto.getRandomValues(array)
+-    return array
+-  }
+-
+-  // Calling getRandomBase64 in remote debugging mode leads to the error
+-  // "Calling synchronous methods on native modules is not supported in Chrome".
+-  // So in that specific case we fall back to just using Math.random().
+-  if (isRemoteDebuggingInChrome()) {
+-    return insecureRandomValues(array)
+-  }
+-
++  // Require native secure entropy. Remote debugging must fail rather than use weak randomness.
+   base64Decode(getRandomBase64(array.byteLength), new Uint8Array(array.buffer, array.byteOffset, array.byteLength))
+ 
+   return array
+ }
+ 
+-function isRemoteDebuggingInChrome () {
+-  // Remote debugging in Chrome is not supported in bridgeless
+-  if ('RN$Bridgeless' in global && RN$Bridgeless === true) {
+-    return false
+-  }
+-
+-  return __DEV__ && typeof global.nativeCallSyncHook === 'undefined'
+-}
+-
+ if (typeof global.crypto !== 'object') {
+   global.crypto = {}
+ }
+ 
+-if (typeof global.crypto.getRandomValues !== 'function') {
+-  global.crypto.getRandomValues = getRandomValues
+-}
++// Always select the reviewed native provider for this project.
++global.crypto.getRandomValues = getRandomValues
+diff --git a/ios/RNGetRandomValues.mm b/ios/RNGetRandomValues.mm
+index f4017c8e81b60ef9bcf3328968c4f591a257570c..311c39ef68e167e3d9db39ff8591e10f15fa23e0 100644
+--- a/ios/RNGetRandomValues.mm
++++ b/ios/RNGetRandomValues.mm
+@@ -1,7 +1,12 @@
+ #import "RNGetRandomValues.h"
+ 
+ @implementation RNGetRandomValues
++#if RCT_NEW_ARCH_ENABLED
+ - (NSString *)getRandomBase64:(double)byteLength {
++#else
++RCT_EXPORT_MODULE(RNGetRandomValues)
++RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getRandomBase64:(double)byteLength) {
++#endif
+     NSMutableData *data = [NSMutableData dataWithLength:byteLength];
+     int result = SecRandomCopyBytes(kSecRandomDefault, byteLength, data.mutableBytes);
+     if (result != errSecSuccess) {
+@@ -16,9 +21,13 @@ - (NSString *)getRandomBase64:(double)byteLength {
+     return std::make_shared<facebook::react::NativeRNGetRandomValuesSpecJSI>(params);
+ }
+ 
++
++#if RCT_NEW_ARCH_ENABLED
+ + (NSString *)moduleName
+ {
+   return @"RNGetRandomValues";
+ }
+ 
++#endif
++
+ @end

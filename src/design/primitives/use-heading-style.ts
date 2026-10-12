@@ -1,0 +1,34 @@
+import { useMemo } from 'react';
+
+import { type HeadingProps } from './heading';
+import { headingSizes, headingWeights } from './text-scale';
+import { useForegroundColor } from './use-foreground-color';
+
+export function useHeadingStyle({ align: textAlign, color, size, weight }: Pick<HeadingProps, 'align' | 'color' | 'size' | 'weight'>) {
+  if (__DEV__) {
+    if (!headingSizes[size]) {
+      throw new Error(
+        `Heading: ${size ? `Invalid size "${size}"` : 'Missing size prop'}. Valid sizes are: ${Object.keys(headingSizes)
+          .map(x => `"${x}"`)
+          .join(', ')}`
+      );
+    }
+  }
+
+  const colorValue = useForegroundColor(color ?? 'label'); // Fallback for JS consumers
+  const sizeStyles = headingSizes[size];
+  const weightStyles = headingWeights[weight];
+
+  const textStyle = useMemo(
+    () =>
+      ({
+        color: colorValue,
+        textAlign,
+        ...sizeStyles,
+        ...weightStyles,
+      }) as const,
+    [colorValue, textAlign, sizeStyles, weightStyles]
+  );
+
+  return textStyle;
+}

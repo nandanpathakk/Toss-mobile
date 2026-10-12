@@ -1,0 +1,35 @@
+import React, { useMemo } from 'react';
+import { View, type ViewStyle } from 'react-native';
+
+import { type SeparatorColor } from './palettes';
+import { useForegroundColor, type CustomColor } from './use-foreground-color';
+
+interface SeparatorProps {
+  color: SeparatorColor | CustomColor;
+  direction?: 'horizontal' | 'vertical';
+  thickness?: number;
+}
+
+/**
+ * @description Renders a separator, either horizontal or vertical.
+ */
+export function Separator({ color, direction = 'horizontal', thickness = 2 }: SeparatorProps) {
+  const foregroundColor = useForegroundColor(color ?? 'separator'); // Fallback for JS consumers
+  const style = useMemo(
+    (): ViewStyle => ({
+      backgroundColor: foregroundColor,
+      borderRadius: thickness / 2,
+      ...(direction === 'horizontal'
+        ? {
+            height: thickness,
+          }
+        : {
+            flexGrow: 1,
+            width: thickness,
+          }),
+    }),
+    [foregroundColor, direction, thickness]
+  );
+
+  return <View style={style} />;
+}

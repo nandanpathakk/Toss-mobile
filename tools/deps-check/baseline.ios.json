@@ -1,0 +1,5296 @@
+[
+  {
+    "type": "dependency",
+    "from": "src/lib/storage/global-settings.ts",
+    "to": "src/features/currency/types.ts",
+    "unresolvedTo": "@/features/currency/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "base-layers-are-leaves"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/storage/preferences.ts",
+    "to": "src/features/address/ethereum-address.ts",
+    "unresolvedTo": "@/features/address/ethereum-address",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "base-layers-are-leaves"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/storage/preferences.ts",
+    "to": "src/features/wallet/signing-wallet.ts",
+    "unresolvedTo": "@/features/wallet/signing-wallet",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "base-layers-are-leaves"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/buttons/hold-to-authorize/hold-to-authorize-button-content.tsx",
+    "to": "src/features/local-auth/biometric-button-content.tsx",
+    "unresolvedTo": "@/features/local-auth/biometric-button-content",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/buttons/hold-to-authorize/hold-to-authorize-button.tsx",
+    "to": "src/features/local-auth/biometry-types.ts",
+    "unresolvedTo": "@/features/local-auth/biometry-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/buttons/hold-to-authorize/hold-to-authorize-button.tsx",
+    "to": "src/features/local-auth/use-biometry-type.ts",
+    "unresolvedTo": "@/features/local-auth/use-biometry-type",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/buttons/paste-address-button.tsx",
+    "to": "src/features/address/use-invalid-paste.ts",
+    "unresolvedTo": "@/features/address/use-invalid-paste",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/buttons/paste-address-button.tsx",
+    "to": "src/features/address/validators.ts",
+    "unresolvedTo": "@/features/address/validators",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-icon/rainbow-coin-icon.tsx",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-icon/rainbow-coin-icon.tsx",
+    "to": "src/features/network/chain-image.tsx",
+    "unresolvedTo": "@/features/network/chain-image",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-icon/request-vendor-logo-icon.tsx",
+    "to": "src/features/network/chain-image.tsx",
+    "unresolvedTo": "@/features/network/chain-image",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-icon/shiny-coin-icon.tsx",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-icon/two-coins-icon.tsx",
+    "to": "src/features/assets/tokens.ts",
+    "unresolvedTo": "@/features/assets/tokens",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-icon/two-coins-icon.tsx",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-icon/two-coins-icon.tsx",
+    "to": "src/features/network/chain-image.tsx",
+    "unresolvedTo": "@/features/network/chain-image",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-row/coin-row.tsx",
+    "to": "src/features/wallet/use-account-settings.ts",
+    "unresolvedTo": "@/features/wallet/use-account-settings",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-row/fast-transaction-coin-row.tsx",
+    "to": "src/features/address/abbreviations.ts",
+    "unresolvedTo": "@/features/address/abbreviations",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-row/fast-transaction-coin-row.tsx",
+    "to": "src/features/currency/types.ts",
+    "unresolvedTo": "@/features/currency/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-row/fast-transaction-coin-row.tsx",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-row/fast-transaction-coin-row.tsx",
+    "to": "src/features/network/chain-image.tsx",
+    "unresolvedTo": "@/features/network/chain-image",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-row/fast-transaction-coin-row.tsx",
+    "to": "src/features/token-launcher/rainbow-super-token-store.ts",
+    "unresolvedTo": "@/features/token-launcher/rainbow-super-token-store",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-row/fast-transaction-coin-row.tsx",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-row/fast-transaction-coin-row.tsx",
+    "to": "src/features/transactions/transactions.ts",
+    "unresolvedTo": "@/features/transactions/transactions",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/coin-row/fast-transaction-status-badge.tsx",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/contacts/contact-row.tsx",
+    "to": "src/features/address/abbreviations.ts",
+    "unresolvedTo": "@/features/address/abbreviations",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/contacts/contact-row.tsx",
+    "to": "src/features/wallet/profile-utils.ts",
+    "unresolvedTo": "@/features/wallet/profile-utils",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/contacts/image-avatar.tsx",
+    "to": "src/features/assets/use-account-accent-color.ts",
+    "unresolvedTo": "@/features/assets/use-account-accent-color",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/empty-asset-list.tsx",
+    "to": "src/app/shell/navbar/navbar.tsx",
+    "unresolvedTo": "@/app/shell/navbar/navbar",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/contact-profile-state.tsx",
+    "to": "src/features/address/use-contacts.ts",
+    "unresolvedTo": "@/features/address/use-contacts",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/contact-profile-state.tsx",
+    "to": "src/features/wallet/profile-utils.ts",
+    "unresolvedTo": "@/features/wallet/profile-utils",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/dev-test-backup-state.tsx",
+    "to": "src/features/backup/backup.ts",
+    "unresolvedTo": "@/features/backup/backup",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/dev-test-backup-state.tsx",
+    "to": "src/features/local-auth/keychain.ts",
+    "unresolvedTo": "@/features/local-auth/keychain",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/dev-test-backup-state.tsx",
+    "to": "src/features/wallet/wallet-loading-states.ts",
+    "unresolvedTo": "@/features/wallet/wallet-loading-states",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/profile/profile-modal.tsx",
+    "to": "src/features/local-auth/biometric-button-content.tsx",
+    "unresolvedTo": "@/features/local-auth/biometric-button-content",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/profile/profile-modal.tsx",
+    "to": "src/features/wallet/avatar-circle.tsx",
+    "unresolvedTo": "@/features/wallet/avatar-circle",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/wallet-profile-state.tsx",
+    "to": "src/features/transactions/web3.ts",
+    "unresolvedTo": "@/features/transactions/web3",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/wallet-profile-state.tsx",
+    "to": "src/features/wallet/profile-utils.ts",
+    "unresolvedTo": "@/features/wallet/profile-utils",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/wallet-profile-state.tsx",
+    "to": "src/features/wallet/wallet-profile-handler.ts",
+    "unresolvedTo": "@/features/wallet/wallet-profile-handler",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/wallet-profile-state.tsx",
+    "to": "src/features/wallet/wallet.ts",
+    "unresolvedTo": "@/features/wallet/wallet",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/expanded-state/wallet-profile-state.tsx",
+    "to": "src/features/wallet/web-data.ts",
+    "unresolvedTo": "@/features/wallet/web-data",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/fields/address-field.tsx",
+    "to": "src/features/address/abbreviations.ts",
+    "unresolvedTo": "@/features/address/abbreviations",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/fields/address-field.tsx",
+    "to": "src/features/address/qr-code-address.ts",
+    "unresolvedTo": "@/features/address/qr-code-address",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/fields/address-field.tsx",
+    "to": "src/features/transactions/web3.ts",
+    "unresolvedTo": "@/features/transactions/web3",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/hold-to-activate-button.tsx",
+    "to": "src/features/local-auth/biometric-button-content.tsx",
+    "unresolvedTo": "@/features/local-auth/biometric-button-content",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/number-pad/input-value-caret.tsx",
+    "to": "src/features/swap/constants.ts",
+    "unresolvedTo": "@/features/swap/constants",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-coin-effect/utils.ts",
+    "to": "src/features/assets/use-account-accent-color.ts",
+    "unresolvedTo": "@/features/assets/use-account-accent-color",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/icons/base-toast-icon.tsx",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/icons/send-toast-icon.tsx",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/icons/send-toast-icon.tsx",
+    "to": "src/features/network/chain-image.tsx",
+    "unresolvedTo": "@/features/network/chain-image",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/icons/send-toast-icon.tsx",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/icons/swap-toast-icon.tsx",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/icons/swap-toast-icon.tsx",
+    "to": "src/features/network/chain-image.tsx",
+    "unresolvedTo": "@/features/network/chain-image",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/icons/swap-toast-icon.tsx",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/rainbow-toast.tsx",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/rainbow-toast.tsx",
+    "to": "src/features/wallet/use-account-settings.ts",
+    "unresolvedTo": "@/features/wallet/use-account-settings",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/toast-content.tsx",
+    "to": "src/features/assets/asset-types.ts",
+    "unresolvedTo": "@/features/assets/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/toast-content.tsx",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/toast-content.tsx",
+    "to": "src/features/transactions/transactions.ts",
+    "unresolvedTo": "@/features/transactions/transactions",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/toast-expanded-content.tsx",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/toast-expanded-content.tsx",
+    "to": "src/features/transactions/transactions.ts",
+    "unresolvedTo": "@/features/transactions/transactions",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/types.tsx",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/use-rainbow-toast-enabled.ts",
+    "to": "src/features/config/experimental-hooks.ts",
+    "unresolvedTo": "@/features/config/experimental-hooks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/use-rainbow-toast-enabled.ts",
+    "to": "src/features/config/experimental.ts",
+    "unresolvedTo": "@/features/config/experimental",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/use-rainbow-toast-enabled.ts",
+    "to": "src/features/config/remote-config.ts",
+    "unresolvedTo": "@/features/config/remote-config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/rainbow-toast/use-rainbow-toasts-store.ts",
+    "to": "src/features/transactions/transaction.ts",
+    "unresolvedTo": "@/features/transactions/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/smooth-pager/list-panel.tsx",
+    "to": "src/features/assets/use-account-accent-color.ts",
+    "unresolvedTo": "@/features/assets/use-account-accent-color",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/text/truncated-address.tsx",
+    "to": "src/features/address/abbreviations.ts",
+    "unresolvedTo": "@/features/address/abbreviations",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/text/truncated-address.tsx",
+    "to": "src/features/transactions/web3.ts",
+    "unresolvedTo": "@/features/transactions/web3",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/toasts/invalid-paste-toast.tsx",
+    "to": "src/features/address/use-invalid-paste.ts",
+    "unresolvedTo": "@/features/address/use-invalid-paste",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/toasts/offline-toast.tsx",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/toasts/offline-toast.tsx",
+    "to": "src/features/wallet/use-account-settings.ts",
+    "unresolvedTo": "@/features/wallet/use-account-settings",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "components-are-feature-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/design/primitives/use-skia-text.ts",
+    "to": "src/components/skia-font-manager.ts",
+    "unresolvedTo": "@/components/skia-font-manager",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "design-is-a-leaf"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/design/primitives/use-skia-text.ts",
+    "to": "src/components/text/types.ts",
+    "unresolvedTo": "@/components/text/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "design-is-a-leaf"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/design/theme/theme-context.tsx",
+    "to": "src/app/navigation/on-navigation-state-change.ts",
+    "unresolvedTo": "@/app/navigation/on-navigation-state-change",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "design-is-a-leaf"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/design/theme/theme-context.tsx",
+    "to": "src/app/shell/use-color-mode-theme.ts",
+    "unresolvedTo": "@/app/shell/use-color-mode-theme",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "design-is-a-leaf"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/design/theme/theme-context.tsx",
+    "to": "src/stores/color-mode.ts",
+    "unresolvedTo": "@/stores/color-mode",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "design-is-a-leaf"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/assets/anvil-assets.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/assets/asset-balance.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/assets/asset-list-builders.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/assets/parse-asset.ts",
+    "to": "src/features/positions/generated/transaction/transaction.ts",
+    "unresolvedTo": "@/features/positions/generated/transaction/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/assets/testnet-assets-by-chain.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/currency/currency-conversion-store.ts",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/contexts/deposit-context.tsx",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/create-amount-store.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/create-deposit-gas-stores.ts",
+    "to": "src/features/swap/quotes.ts",
+    "unresolvedTo": "@/features/swap/quotes",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/create-deposit-gas-stores.ts",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/create-deposit-quote-store.ts",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/create-deposit-store.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/create-withdrawal-quote-store.ts",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/create-withdrawal-token-store.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/crosschain-quote.ts",
+    "to": "src/features/swap/quotes.ts",
+    "unresolvedTo": "@/features/swap/quotes",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit-screen.tsx",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit-screen.tsx",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/deposit-amount-input.tsx",
+    "to": "src/features/swap/balance-badge.tsx",
+    "unresolvedTo": "@/features/swap/balance-badge",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/deposit-amount-input.tsx",
+    "to": "src/features/swap/swap-action-button.tsx",
+    "unresolvedTo": "@/features/swap/swap-action-button",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/deposit-amount-input.tsx",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/deposit-input-container.tsx",
+    "to": "src/features/swap/constants.ts",
+    "unresolvedTo": "@/features/swap/constants",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/deposit-input-container.tsx",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/deposit-token-list.tsx",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/deposit-token-list.tsx",
+    "to": "src/features/swap/coin-row.tsx",
+    "unresolvedTo": "@/features/swap/coin-row",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/gas/gas-fee-text.tsx",
+    "to": "src/features/swap/constants.ts",
+    "unresolvedTo": "@/features/swap/constants",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/search-input.tsx",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/execution/deposit-rap-execution.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/quotes.ts",
+    "to": "src/features/swap/quotes.ts",
+    "unresolvedTo": "@/features/swap/quotes",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/same-chain-quote.ts",
+    "to": "src/features/swap/quotes.ts",
+    "unresolvedTo": "@/features/swap/quotes",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/slippage.ts",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/source-asset.ts",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/store-types.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/types.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/use-deposit-controller.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/use-deposit-handler.ts",
+    "to": "src/features/swap/quotes.ts",
+    "unresolvedTo": "@/features/swap/quotes",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/use-withdrawal-handler.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/withdrawal-screen.tsx",
+    "to": "src/features/swap/swaps.ts",
+    "unresolvedTo": "@/features/swap/swaps",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/withdrawal-swap.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/network/backend-networks.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/network/ethereum-utils.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/network/network-selector.tsx",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transactions/parsers/transactions.ts",
+    "to": "src/features/positions/generated/transaction/transaction.ts",
+    "unresolvedTo": "@/features/positions/generated/transaction/transaction",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transactions/pending-transaction-watcher.tsx",
+    "to": "src/features/activity/use-watch-pending-txs.ts",
+    "unresolvedTo": "@/features/activity/use-watch-pending-txs",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transactions/raps/actions/claim-claimable.ts",
+    "to": "src/features/claimables/claim.ts",
+    "unresolvedTo": "@/features/claimables/claim",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transactions/raps/claim-claimable.ts",
+    "to": "src/features/swap/quotes.ts",
+    "unresolvedTo": "@/features/swap/quotes",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transactions/raps/references.ts",
+    "to": "src/features/claimables/transaction-types.ts",
+    "unresolvedTo": "@/features/claimables/transaction-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transactions/raps/references.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transactions/raps/swap-metadata.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transactions/raps/transaction-asset.ts",
+    "to": "src/features/swap/asset-types.ts",
+    "unresolvedTo": "@/features/swap/asset-types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transactions/transactions.ts",
+    "to": "src/features/token-launcher/rainbow-super-token-store.ts",
+    "unresolvedTo": "@/features/token-launcher/rainbow-super-token-store",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/change-wallet-sheet/change-wallet-sheet.tsx",
+    "to": "src/features/notifications/settings/storage.ts",
+    "unresolvedTo": "@/features/notifications/settings/storage",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/load-wallet.ts",
+    "to": "src/features/local-auth/keychain.ts",
+    "unresolvedTo": "@/features/local-auth/keychain",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/signing-wallet.ts",
+    "to": "src/features/local-auth/keychain-constants.ts",
+    "unresolvedTo": "@/features/local-auth/keychain-constants",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/signing-wallet.ts",
+    "to": "src/features/local-auth/keychain.ts",
+    "unresolvedTo": "@/features/local-auth/keychain",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/use-account-asset.ts",
+    "to": "src/features/token-launcher/rainbow-super-token-store.ts",
+    "unresolvedTo": "@/features/token-launcher/rainbow-super-token-store",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/wallet-keychain.ts",
+    "to": "src/features/local-auth/keychain-constants.ts",
+    "unresolvedTo": "@/features/local-auth/keychain-constants",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/wallet-keychain.ts",
+    "to": "src/features/local-auth/keychain.ts",
+    "unresolvedTo": "@/features/local-auth/keychain",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/wallet.ts",
+    "to": "src/features/local-auth/keychain-constants.ts",
+    "unresolvedTo": "@/features/local-auth/keychain-constants",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/wallet.ts",
+    "to": "src/features/local-auth/keychain.ts",
+    "unresolvedTo": "@/features/local-auth/keychain",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/wallet.ts",
+    "to": "src/features/notifications/settings/constants.ts",
+    "unresolvedTo": "@/features/notifications/settings/constants",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/wallet.ts",
+    "to": "src/features/notifications/settings/initialization.ts",
+    "unresolvedTo": "@/features/notifications/settings/initialization",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/wallet/wallet.ts",
+    "to": "src/features/notifications/settings/types.ts",
+    "unresolvedTo": "@/features/notifications/settings/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "foundation-features-do-not-import-product"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/addys/claimables/types.ts",
+    "to": "src/features/assets/tokens.ts",
+    "unresolvedTo": "@/features/assets/tokens",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/addys/claimables/types.ts",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/addys/claimables/utils.ts",
+    "to": "src/features/assets/parse-asset.ts",
+    "unresolvedTo": "@/features/assets/parse-asset",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/addys/claimables/utils.ts",
+    "to": "src/features/currency/native-display.ts",
+    "unresolvedTo": "@/features/currency/native-display",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/addys/claimables/utils.ts",
+    "to": "src/features/currency/types.ts",
+    "unresolvedTo": "@/features/currency/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/addys/claimables/utils.ts",
+    "to": "src/features/network/backend-networks-store.ts",
+    "unresolvedTo": "@/features/network/backend-networks-store",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/addys/claimables/utils.ts",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/addys/types.ts",
+    "to": "src/features/network/backend-networks.ts",
+    "unresolvedTo": "@/features/network/backend-networks",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/images/imgix.ts",
+    "to": "src/features/config/remote-config.ts",
+    "unresolvedTo": "@/features/config/remote-config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/measure-text.ts",
+    "to": "src/design/primitives/text-scale.ts",
+    "unresolvedTo": "@/design/primitives/text-scale",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/measure-text.ts",
+    "to": "src/design/primitives/text.tsx",
+    "unresolvedTo": "@/design/primitives/text",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/react-query/react-query-utils.ts",
+    "to": "src/features/debug/log-sheet.tsx",
+    "unresolvedTo": "@/features/debug/log-sheet",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/react-query/react-query-utils.ts",
+    "to": "src/features/favorites/favorites.ts",
+    "unresolvedTo": "@/features/favorites/favorites",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/routes/prefetch.ts",
+    "to": "src/app/navigation/types.ts",
+    "unresolvedTo": "@/app/navigation/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/routes/virtual-route.ts",
+    "to": "src/app/navigation/route-context.tsx",
+    "unresolvedTo": "@/app/navigation/route-context",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/routes/virtual-route.ts",
+    "to": "src/app/navigation/types.ts",
+    "unresolvedTo": "@/app/navigation/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/routes/virtual.ts",
+    "to": "src/app/navigation/pager-navigation.ts",
+    "unresolvedTo": "@/app/navigation/pager-navigation",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/routes/virtual.ts",
+    "to": "src/app/navigation/route-context.tsx",
+    "unresolvedTo": "@/app/navigation/route-context",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/routes/virtual.ts",
+    "to": "src/app/navigation/types.ts",
+    "unresolvedTo": "@/app/navigation/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/storage/global-settings.ts",
+    "to": "src/features/currency/types.ts",
+    "unresolvedTo": "@/features/currency/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/storage/preferences.ts",
+    "to": "src/features/address/ethereum-address.ts",
+    "unresolvedTo": "@/features/address/ethereum-address",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/lib/storage/preferences.ts",
+    "to": "src/features/wallet/signing-wallet.ts",
+    "unresolvedTo": "@/features/wallet/signing-wallet",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "lib-is-app-agnostic"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/app/navigation/main-list-context.tsx",
+    "to": "node_modules/@legendapp/list/react-native.js",
+    "unresolvedTo": "@legendapp/list/react-native",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/avatar-builder/emoji-selector.tsx",
+    "to": "node_modules/recyclerlistview/dist/reactnative/core/scrollcomponent/BaseScrollView.js",
+    "unresolvedTo": "recyclerlistview/dist/reactnative/core/scrollcomponent/BaseScrollView",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/avatar-builder/emoji-selector.tsx",
+    "to": "node_modules/recyclerlistview/dist/reactnative/core/StickyContainer.js",
+    "unresolvedTo": "recyclerlistview/dist/reactnative/core/StickyContainer",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/components/avatar-builder/emoji-selector.tsx",
+    "to": "node_modules/recyclerlistview/dist/reactnative/index.js",
+    "unresolvedTo": "recyclerlistview",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/activity/activity-list/activity-list.tsx",
+    "to": "node_modules/@legendapp/list/react-native.js",
+    "unresolvedTo": "@legendapp/list/react-native",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/claimables/airdrops/airdrops-sheet.tsx",
+    "to": "node_modules/@legendapp/list/react-native.js",
+    "unresolvedTo": "@legendapp/list/react-native",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/deposit/deposit-token-list.tsx",
+    "to": "node_modules/@legendapp/list/react-native.js",
+    "unresolvedTo": "@legendapp/list/react-native",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/portfolio/asset-list/recycler-asset-list/core/external-scroll-view.tsx",
+    "to": "node_modules/recyclerlistview/dist/reactnative/core/scrollcomponent/BaseScrollView.js",
+    "unresolvedTo": "recyclerlistview/dist/reactnative/core/scrollcomponent/BaseScrollView",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/portfolio/asset-list/recycler-asset-list/core/get-layout-provider.tsx",
+    "to": "node_modules/recyclerlistview/dist/reactnative/index.js",
+    "unresolvedTo": "recyclerlistview",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/portfolio/asset-list/recycler-asset-list/core/raw-recycler-list.tsx",
+    "to": "node_modules/recyclerlistview/dist/reactnative/index.js",
+    "unresolvedTo": "recyclerlistview",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/portfolio/asset-list/recycler-asset-list/core/sticky-headers.tsx",
+    "to": "node_modules/recyclerlistview/dist/reactnative/index.js",
+    "unresolvedTo": "recyclerlistview",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/portfolio/asset-list/recycler-asset-list/core/use-layout-item-animator.ts",
+    "to": "node_modules/recyclerlistview/dist/reactnative/index.js",
+    "unresolvedTo": "recyclerlistview",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/portfolio/asset-list/recycler-asset-list/core/view-types.ts",
+    "to": "node_modules/recyclerlistview/dist/reactnative/core/RecyclerListView.js",
+    "unresolvedTo": "recyclerlistview/dist/reactnative/core/RecyclerListView",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/portfolio/asset-list/recycler-asset-list/core/view-types.ts",
+    "to": "node_modules/recyclerlistview/dist/reactnative/index.js",
+    "unresolvedTo": "recyclerlistview",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transfer/send-asset-list.tsx",
+    "to": "node_modules/recyclerlistview/dist/reactnative/index.js",
+    "unresolvedTo": "recyclerlistview",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-list-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/app/navigation/navigation.tsx",
+    "to": "node_modules/@react-navigation/stack/lib/module/index.js",
+    "unresolvedTo": "@react-navigation/stack",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/app/navigation/types.ts",
+    "to": "node_modules/@react-navigation/stack/lib/module/index.js",
+    "unresolvedTo": "@react-navigation/stack",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/app/root.tsx",
+    "to": "src/app/navigation/routes.ios.tsx",
+    "unresolvedTo": "./navigation/routes",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/backup/backup-cloud-step.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/backup/backup-sheet.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/backup/choose-backup-step.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/backup/restore-cloud-step.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/backup/secret-display/secret-display-section.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transfer/send-empty-state.tsx",
+    "to": "src/app/navigation/effects.tsx",
+    "unresolvedTo": "@/app/navigation/effects",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transfer/send-flow-navigator.tsx",
+    "to": "node_modules/@react-navigation/stack/lib/module/index.js",
+    "unresolvedTo": "@react-navigation/stack",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transfer/send-flow-navigator.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transfer/send-flow-navigator.tsx",
+    "to": "src/app/navigation/effects.tsx",
+    "unresolvedTo": "@/app/navigation/effects",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/avatar-builder.tsx",
+    "to": "src/app/navigation/effects.tsx",
+    "unresolvedTo": "@/app/navigation/effects",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/check-identifier-screen.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/learn-web-view-screen.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/receive-modal.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/restore-sheet.tsx",
+    "to": "node_modules/@react-navigation/stack/lib/module/index.js",
+    "unresolvedTo": "@react-navigation/stack",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/restore-sheet.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/settings-sheet/backups/secret-warning.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/settings-sheet/index.tsx",
+    "to": "node_modules/@react-navigation/stack/lib/module/index.js",
+    "unresolvedTo": "@react-navigation/stack",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/settings-sheet/index.tsx",
+    "to": "src/app/navigation/config.tsx",
+    "unresolvedTo": "@/app/navigation/config",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/screens/settings-sheet/settings-card-style-interpolator.ts",
+    "to": "node_modules/@react-navigation/stack/lib/module/index.js",
+    "unresolvedTo": "@react-navigation/stack",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-navigation-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/app/root.tsx",
+    "to": "src/lib/react-query/persist-query-client-provider.tsx",
+    "unresolvedTo": "@/lib/react-query/persist-query-client-provider",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/app/root.tsx",
+    "to": "src/lib/react-query/query-client.ts",
+    "unresolvedTo": "@/lib/react-query/query-client",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/activity/use-watch-pending-txs.ts",
+    "to": "src/lib/react-query/query-client.ts",
+    "unresolvedTo": "@/lib/react-query/query-client",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/charts/use-chart-info.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/charts/use-chart-info.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/claimables/claim-claimable-panel/sponsored/sponsored-claimable-context.tsx",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/claimables/claim-claimable-panel/transaction/transaction-claimable-context.tsx",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/claimables/claim-claimable-panel/transaction/transaction-claimable-context.tsx",
+    "to": "src/lib/react-query/query-client.ts",
+    "unresolvedTo": "@/lib/react-query/query-client",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/dapp/dapp.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/dapp/dapp.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/dapp/dapp.ts",
+    "to": "src/lib/react-query/query-client.ts",
+    "unresolvedTo": "@/lib/react-query/query-client",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/dapp/dapp.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/debug/dev-section.tsx",
+    "to": "src/lib/react-query/react-query-utils.ts",
+    "unresolvedTo": "@/lib/react-query/react-query-utils",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/favorites/favorites.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/favorites/favorites.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/favorites/favorites.ts",
+    "to": "src/lib/react-query/query-client.ts",
+    "unresolvedTo": "@/lib/react-query/query-client",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/funding/fiat-on-ramp-sheet/fiat-on-ramp-sheet.tsx",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/gas/meteorology.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/gas/meteorology.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/gas/meteorology.ts",
+    "to": "src/lib/react-query/query-client.ts",
+    "unresolvedTo": "@/lib/react-query/query-client",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/gas/meteorology.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/gas/use-gas.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/gas/use-selected-gas.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/network/ethereum-utils.ts",
+    "to": "src/lib/react-query/query-client.ts",
+    "unresolvedTo": "@/lib/react-query/query-client",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/swap/use-swap-estimated-gas-limit.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/swap/use-swap-estimated-gas-limit.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/swap/use-swap-estimated-gas-limit.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/token/use-additional-asset-data.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/features/transfer/use-send-submit.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/consolidated-transactions.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/consolidated-transactions.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/consolidated-transactions.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/external-token.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/external-token.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/external-token.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/interactions-count.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/interactions-count.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/interactions-count.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/rewards.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/rewards.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/rewards.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/token-interactions.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/token-interactions.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/token-interactions.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/token-market-stats.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/token-market-stats.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/token-market-stats.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/transaction-simulation.ts",
+    "to": "node_modules/@tanstack/react-query/build/legacy/index.js",
+    "unresolvedTo": "@tanstack/react-query",
+    "dependencyTypes": [
+      "npm",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/transaction-simulation.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/transaction-simulation.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/transactions.ts",
+    "to": "src/lib/react-query/create-query-key.ts",
+    "unresolvedTo": "@/lib/react-query/create-query-key",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/transactions.ts",
+    "to": "src/lib/react-query/query-client.ts",
+    "unresolvedTo": "@/lib/react-query/query-client",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/transactions.ts",
+    "to": "src/lib/react-query/types.ts",
+    "unresolvedTo": "@/lib/react-query/types",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/wallets/one-time-wallet-setup.ts",
+    "to": "src/lib/react-query/react-query-utils.ts",
+    "unresolvedTo": "@/lib/react-query/react-query-utils",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "no-new-legacy-state-imports"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/internal/create-selector-read-tracker.ts",
+    "to": "src/hooks/use-cleanup.ts",
+    "unresolvedTo": "@/hooks/use-cleanup",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "state-does-not-import-ui"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/internal/create-selector-read-tracker.ts",
+    "to": "src/hooks/use-stable-value.ts",
+    "unresolvedTo": "@/hooks/use-stable-value",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "state-does-not-import-ui"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/internal/use-listener-route-guard.ts",
+    "to": "src/hooks/use-stable-value.ts",
+    "unresolvedTo": "@/hooks/use-stable-value",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "state-does-not-import-ui"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/internal/use-store-shared-value.ts",
+    "to": "src/hooks/use-stable-value.ts",
+    "unresolvedTo": "@/hooks/use-stable-value",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "state-does-not-import-ui"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/pending-transactions/index.ts",
+    "to": "src/components/rainbow-toast/use-rainbow-toasts-store.ts",
+    "unresolvedTo": "@/components/rainbow-toast/use-rainbow-toasts-store",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "state-does-not-import-ui"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "src/stores/sync/session-entry-prompt-sync.tsx",
+    "to": "src/hooks/use-active-route.ts",
+    "unresolvedTo": "@/hooks/use-active-route",
+    "dependencyTypes": [
+      "aliased",
+      "aliased-tsconfig",
+      "aliased-tsconfig-paths",
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "state-does-not-import-ui"
+    }
+  },
+  {
+    "from": "src/features/activity",
+    "to": "src/features/address",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/activity",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/activity",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/activity",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/activity",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/activity",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/activity",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/address",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/assets",
+    "to": "src/features/address",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/assets",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/assets",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/assets",
+    "to": "src/features/positions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/assets",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/assets",
+    "to": "src/features/token",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/assets",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/address",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/config",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/rnbw-membership",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/rnbw-staking",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/token",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/cash",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/charts",
+    "to": "src/features/config",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/charts",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/charts",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/charts",
+    "to": "src/features/polymarket",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/charts",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/charts",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/claimables",
+    "to": "src/features/address",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/claimables",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/claimables",
+    "to": "src/features/config",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/claimables",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/claimables",
+    "to": "src/features/gas",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/claimables",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/claimables",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/claimables",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/claimables",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/config",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/currency",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/dapp-request",
+    "to": "src/features/wallet-connect",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/favorites",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/favorites",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/favorites",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/favorites",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/funding",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/funding",
+    "to": "src/features/config",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/funding",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/funding",
+    "to": "src/features/gas",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/funding",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/funding",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/funding",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/funding",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/gas",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/gas",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/gas",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/gas",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/network",
+    "to": "src/features/address",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/network",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/network",
+    "to": "src/features/gas",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/network",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/network",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/notifications",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/cash",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/charts",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/config",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/funding",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/token",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/polymarket",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/positions",
+    "to": "src/features/config",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/positions",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/positions",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-membership",
+    "to": "src/features/polymarket",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-membership",
+    "to": "src/features/rnbw-rewards",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-membership",
+    "to": "src/features/rnbw-staking",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-membership",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-rewards",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-rewards",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-rewards",
+    "to": "src/features/polymarket",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-rewards",
+    "to": "src/features/rnbw-membership",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-rewards",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-rewards",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-rewards",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/config",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/funding",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/gas",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/rnbw-membership",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/rnbw-rewards",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/rnbw-staking",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/config",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/favorites",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/funding",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/gas",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/rnbw-rewards",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/swap",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token",
+    "to": "src/features/address",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token-launcher",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token-launcher",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token-launcher",
+    "to": "src/features/gas",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token-launcher",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token-launcher",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token-launcher",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/token-launcher",
+    "to": "src/features/wallet",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/activity",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/address",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/claimables",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/gas",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/positions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/swap",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/transactions",
+    "to": "src/features/token-launcher",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/wallet",
+    "to": "src/features/address",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/wallet",
+    "to": "src/features/assets",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/wallet",
+    "to": "src/features/config",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/wallet",
+    "to": "src/features/currency",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/wallet",
+    "to": "src/features/network",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/wallet",
+    "to": "src/features/notifications",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/wallet",
+    "to": "src/features/token-launcher",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/wallet",
+    "to": "src/features/transactions",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  },
+  {
+    "from": "src/features/wallet-connect",
+    "to": "src/features/dapp-request",
+    "rule": {
+      "name": "no-feature-cycle"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+ENV['EXPO_NO_DOTENV'] = '1'
+ENV['EXPO_NO_TELEMETRY'] = '1'
+ENV['EXPO_USE_SOURCE'] = '1'
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+source 'https://cdn.cocoapods.org/'
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve("react-native/scripts/react_native_pods.rb", {paths: [process.argv[1]]})', __dir__]).strip
+require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), 'scripts/autolinking')
+platform :ios, min_ios_version_supported
+prepare_react_native_project!
+
+target 'Rainbow' do
+  use_expo_modules!
+  config = use_native_modules!
+  use_react_native!(
+    :path => config[:reactNativePath],
+    :new_arch_enabled => false,
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+  post_install do |installer|
+    react_native_post_install(installer, config[:reactNativePath], :mac_catalyst_enabled => false)
+  end
+end
+
+# A legacy provider reference survived without target membership. Expo's integrator
+# only adds membership when it creates the reference, so enforce it after integration.
+post_integrate do |installer|
+  installer.aggregate_targets.select { |aggregate| aggregate.name == 'Pods-Rainbow' }.each do |aggregate|
+    project = aggregate.user_project
+    target = project.native_targets.find { |native_target| native_target.name == 'Rainbow' }
+    provider = project.files.find { |file| file.path&.end_with?('ExpoModulesProvider.swift') }
+    raise 'Expo modules provider was not generated' unless target && provider
+    unless target.source_build_phase.files_references.include?(provider)
+      target.add_file_references([provider])
+      project.save
+    end
+  end
+end

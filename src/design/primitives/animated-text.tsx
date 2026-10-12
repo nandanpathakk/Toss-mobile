@@ -1,0 +1,92 @@
+import React, { useMemo, type ComponentRef } from 'react';
+import { type StyleProp, type TextStyle } from 'react-native';
+
+import AnimateableText from 'react-native-animateable-text';
+import { useAnimatedProps, type DerivedValue, type SharedValue } from 'react-native-reanimated';
+
+import { createLineHeightFixNode } from './create-line-height-fix-node';
+import { type TextColor } from './palettes';
+import { type TextSize, type TextWeight } from './text';
+import { type CustomColor } from './use-foreground-color';
+import { useTextStyle } from './use-text-style';
+
+export type SharedOrDerivedValueText =
+  | (SharedValue<string> | DerivedValue<string>)
+  | (SharedValue<string | null> | DerivedValue<string | null>)
+  | (SharedValue<string | undefined> | DerivedValue<string | undefined>)
+  | (SharedValue<string | null | undefined> | DerivedValue<string | null | undefined>);
+
+export type AnimatedTextProps<T extends SharedValue | DerivedValue = SharedValue | DerivedValue> = {
+  align?: 'center' | 'left' | 'right';
+  color?: TextColor | CustomColor;
+  ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip' | undefined;
+  numberOfLines?: number;
+  selectable?: boolean;
+  size: TextSize;
+  style?: StyleProp<TextStyle>;
+  tabularNumbers?: boolean;
+  testID?: string;
+  uppercase?: boolean;
+  weight?: TextWeight;
+  ref?: ComponentRef<typeof AnimateableText>;
+} & (AnimatedTextChildProps | AnimatedTextSelectorProps<T>);
+
+export type AnimatedTextChildProps = {
+  children: SharedOrDerivedValueText | string | null | undefined;
+  selector?: undefined;
+};
+
+export type AnimatedTextSelectorProps<T extends SharedValue | DerivedValue> = {
+  children: T;
+  /**
+   * A worklet function that selects text from a shared value provided via `children`.
+   */
+  selector: (sharedValue: T) => string | null | undefined;
+};
+
+export function AnimatedText<T extends SharedValue | DerivedValue>({
+  align,
+  children,
+  color = 'label',
+  ellipsizeMode,
+  numberOfLines,
+  selectable,
+  selector,
+  size,
+  style,
+  tabularNumbers,
+  testID,
+  uppercase,
+  weight,
+  ref,
+}: AnimatedTextProps<T>) {
+  const textStyle = useTextStyle({
+    align,
+    color,
+    size,
+    tabularNumbers,
+    uppercase,
+    weight,
+  });
+
+  const lineHeightFixNode = useMemo(() => createLineHeightFixNode(textStyle.lineHeight), [textStyle]);
+
+  const animatedText = useAnimatedProps(() => ({
+    text: (selector ? selector(children) : typeof children === 'string' ? children : children?.value) ?? '',
+  }));
+
+  return (
+    <AnimateableText
+      allowFontScaling={false}
+      animatedProps={animatedText}
+      numberOfLines={numberOfLines}
+      ellipsizeMode={ellipsizeMode}
+      ref={ref}
+      selectable={selectable}
+      style={style ? [textStyle, style] : textStyle}
+      testID={testID}
+    >
+      {lineHeightFixNode}
+    </AnimateableText>
+  );
+}

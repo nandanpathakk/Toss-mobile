@@ -1,0 +1,218 @@
+import { useCallback } from 'react';
+import { Platform } from 'react-native';
+
+import {
+  Skia,
+  type SkColor,
+  type SkPaint,
+  type SkParagraph,
+  type SkTextFontFeatures,
+  type SkTextFontStyle,
+  type SkTextShadow,
+  type SkTextStyle,
+} from '@shopify/react-native-skia';
+import { useDerivedValue, type DerivedValue, type SharedValue } from 'react-native-reanimated';
+
+import { getSkiaFontWeight, useSkiaFontManager } from '@/components/skia-font-manager';
+import { type TextAlign } from '@/components/text/types';
+import { typeHierarchy, type TextSize } from '@/design/type-hierarchy';
+
+import { type SharedOrDerivedValueText } from './animated-text';
+import { useColorMode } from './color-mode';
+import { opacity } from './opacity';
+import { type TextColor } from './palettes';
+import { type TextWeight } from './text';
+import { getColorForTheme } from './use-foreground-color';
+
+type SharedOrDerivedValue<T> = SharedValue<T> | DerivedValue<T>;
+
+export type TextSegment = {
+  backgroundPaint?: SkPaint;
+  foregroundPaint?: SkPaint;
+  shadows?: SkTextShadow[];
+  tabularNumbers?: boolean;
+  text: SharedOrDerivedValueText | string;
+  weight?: TextWeight;
+} & (
+  | {
+      color: SkColor;
+      opacity?: undefined;
+    }
+  | {
+      color?: string;
+      opacity?: number;
+    }
+);
+
+type UseSkiaTextOptions = {
+  additionalWeights?: TextWeight | TextWeight[];
+  align?: TextAlign;
+  backgroundPaint?: SkPaint;
+  color: TextColor | string | SharedOrDerivedValue<TextColor> | SharedOrDerivedValue<string>;
+  foregroundPaint?: SkPaint;
+  halfLeading?: boolean;
+  letterSpacing?: number;
+  lineHeight?: number;
+  shadows?: SkTextShadow[];
+  size: TextSize;
+  tabularNumbers?: boolean;
+  weight?: TextWeight;
+};
+
+/**
+ * Internal hook that returns a worklet function for building Skia text paragraphs.
+ * Powers the `SkiaText` component — generally not meant for direct use.
+ * @returns A function that takes an array of text segments and returns a Skia paragraph
+ */
+export function useSkiaText({
+  additionalWeights,
+  align = 'left',
+  backgroundPaint,
+  color,
+  halfLeading = false,
+  foregroundPaint,
+  letterSpacing,
+  lineHeight,
+  shadows,
+  size,
+  tabularNumbers = false,
+  weight = 'regular',
+}: UseSkiaTextOptions): (segments: TextSegment | TextSegment[]) => SkParagraph | null {
+  const manager = useSkiaFontManager(align, weight, additionalWeights);
+
+  const { colorMode } = useColorMode();
+  const fontInfo = typeHierarchy.text[size];
+  const isSharedValueColor = typeof color !== 'string';
+
+  const processedColor = useDerivedValue(() => {
+    const colorValue = getColorForTheme(isSharedValueColor ? color.value : color, colorMode);
+    return {
+      color: colorValue,
+      skiaColor: Skia.Color(colorValue),
+    };
+  }, [color, colorMode, isSharedValueColor]);
+
+  // On Android, weight changes trigger the creation of a new paragraphBuilder, and we want to wait
+  // until the new paragraphBuilder is created before rebuilding the paragraph. So to avoid a flash
+  // of the incorrect weight if the new weight isn't yet loaded, we omit the dependency on weight.
+  const weightDep = Platform.OS === 'ios' ? weight : undefined;
+
+  const buildParagraph = useCallback(
+    (segments: TextSegment | TextSegment[]) => {
+      'worklet';
+      const paragraphBuilder = manager.paragraphBuilder;
+      if (!paragraphBuilder) return null;
+
+      paragraphBuilder.reset();
+
+      const buildSegment = (segment: TextSegment) => {
+        const colors = processedColor.value;
+        const segmentStyle = getTextStyle({
+          color: colors.color,
+          colorOverride: segment.color,
+          defaultColor: colors.skiaColor,
+          fontInfo,
+          halfLeading,
+          letterSpacing,
+          lineHeight,
+          tabularNumbers: segment.tabularNumbers ?? tabularNumbers,
+          weight,
+          weightOverride: segment.weight,
+        });
+
+        if (segment.foregroundPaint && segment.color) segment.foregroundPaint.setColor(segmentStyle.color);
+        if (shadows || segment.shadows) segmentStyle.shadows = segment.shadows;
+        if (segment.opacity !== undefined && segment.color) {
+          segmentStyle.color = Skia.Color(opacity(segment.color, segment.opacity));
+        }
+        paragraphBuilder.pushStyle(segmentStyle, segment.foregroundPaint ?? foregroundPaint, segment.backgroundPaint ?? backgroundPaint);
+        paragraphBuilder.addText(typeof segment.text === 'string' ? segment.text : (segment.text.value ?? ''));
+        paragraphBuilder.pop();
+      };
+
+      if (Array.isArray(segments)) {
+        for (let i = 0; i < segments.length; i++) {
+          buildSegment(segments[i]);
+        }
+      } else {
+        buildSegment(segments);
+      }
+
+      return paragraphBuilder.build();
+    },
+    // Only the weight dependency is omitted on Android (see comment above)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [
+      backgroundPaint,
+      color,
+      fontInfo,
+      foregroundPaint,
+      halfLeading,
+      letterSpacing,
+      lineHeight,
+      manager.paragraphBuilder,
+      processedColor,
+      shadows,
+      size,
+      tabularNumbers,
+      weightDep,
+    ]
+  );
+
+  return buildParagraph;
+}
+
+const SF_PRO_ROUNDED_IOS = ['SF Pro Rounded'];
+const EMPTY_FONT_FEATURES: SkTextFontFeatures[] = [];
+const EMPTY_FONT_STYLE: SkTextFontStyle = {};
+const TABULAR_NUMBERS: SkTextFontFeatures[] = [{ name: 'tnum', value: 1 }];
+
+/**
+ * Builds the text style, merging in text segment overrides if needed.
+ * @returns A SkTextStyle object
+ */
+function getTextStyle({
+  color,
+  colorOverride,
+  defaultColor,
+  fontInfo,
+  halfLeading,
+  letterSpacing,
+  lineHeight,
+  tabularNumbers,
+  weight,
+  weightOverride,
+}: {
+  color: SharedOrDerivedValue<string> | string;
+  colorOverride?: string | SkColor;
+  defaultColor?: SharedOrDerivedValue<SkColor> | SkColor;
+  fontInfo: (typeof typeHierarchy.text)[TextSize];
+  halfLeading: boolean;
+  letterSpacing: number | undefined;
+  lineHeight: number | undefined;
+  tabularNumbers: boolean;
+  weight: TextWeight;
+  weightOverride?: TextWeight;
+}): Required<
+  Pick<SkTextStyle, 'color' | 'fontFamilies' | 'fontSize' | 'fontStyle' | 'halfLeading' | 'heightMultiplier' | 'letterSpacing'>
+> & {
+  fontFeatures: SkTextFontFeatures[] | undefined;
+  shadows?: SkTextShadow[];
+} {
+  'worklet';
+  return {
+    color: colorOverride
+      ? typeof colorOverride === 'string'
+        ? Skia.Color(colorOverride)
+        : colorOverride
+      : ((defaultColor && 'value' in defaultColor ? defaultColor.value : defaultColor) ??
+        Skia.Color(typeof color === 'string' ? color : color.value)),
+    fontFamilies: Platform.OS === 'ios' ? SF_PRO_ROUNDED_IOS : [`SFProRounded-${weightOverride ?? weight}`],
+    fontSize: fontInfo.fontSize,
+    fontStyle: Platform.OS === 'ios' ? { weight: getSkiaFontWeight(weightOverride ?? weight) } : EMPTY_FONT_STYLE,
+    fontFeatures: tabularNumbers ? TABULAR_NUMBERS : EMPTY_FONT_FEATURES,
+    halfLeading,
+    heightMultiplier: (lineHeight ? lineHeight : fontInfo.lineHeight) / fontInfo.fontSize,
+    letterSpacing: letterSpacing ?? fontInfo.letterSpacing,
+  };
+}

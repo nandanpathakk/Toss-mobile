@@ -1,0 +1,91 @@
+diff --git a/lib/parse.js b/lib/parse.js
+--- a/lib/parse.js
++++ b/lib/parse.js
+@@ -144,6 +144,7 @@
+ 
+     if (value === CHAR_LEFT_PARENTHESES) {
+       block = push({ type: 'paren', nodes: [] });
++      if (stack.length >= 64) throw new RangeError('Panta: brace pattern exceeds nesting limit');
+       stack.push(block);
+       push({ type: 'text', value });
+       continue;
+@@ -210,6 +211,7 @@
+       };
+ 
+       block = push(brace);
++      if (stack.length >= 64) throw new RangeError('Panta: brace pattern exceeds nesting limit');
+       stack.push(block);
+       push({ type: 'open', value });
+       continue;
+diff --git a/lib/compile.js b/lib/compile.js
+--- a/lib/compile.js
++++ b/lib/compile.js
+@@ -1,9 +1,12 @@
+ 'use strict';
++
++const assertDepth = require('./assert-depth');
+ 
+ const fill = require('fill-range');
+ const utils = require('./utils');
+ 
+ const compile = (ast, options = {}) => {
++  assertDepth(ast);
+   const walk = (node, parent = {}) => {
+     const invalidBlock = utils.isInvalidBrace(parent);
+     const invalidNode = node.invalid === true && options.escapeInvalid === true;
+diff --git a/lib/expand.js b/lib/expand.js
+--- a/lib/expand.js
++++ b/lib/expand.js
+@@ -1,4 +1,6 @@
+ 'use strict';
++
++const assertDepth = require('./assert-depth');
+ 
+ const fill = require('fill-range');
+ const stringify = require('./stringify');
+@@ -31,6 +33,7 @@
+ };
+ 
+ const expand = (ast, options = {}) => {
++  assertDepth(ast);
+   const rangeLimit = options.rangeLimit === undefined ? 1000 : options.rangeLimit;
+ 
+   const walk = (node, parent = {}) => {
+diff --git a/lib/stringify.js b/lib/stringify.js
+--- a/lib/stringify.js
++++ b/lib/stringify.js
+@@ -1,8 +1,11 @@
+ 'use strict';
++
++const assertDepth = require('./assert-depth');
+ 
+ const utils = require('./utils');
+ 
+ module.exports = (ast, options = {}) => {
++  assertDepth(ast);
+   const stringify = (node, parent = {}) => {
+     const invalidBlock = options.escapeInvalid && utils.isInvalidBrace(parent);
+     const invalidNode = node.invalid === true && options.escapeInvalid === true;
+diff --git a/lib/assert-depth.js b/lib/assert-depth.js
+new file mode 100644
+--- /dev/null
++++ b/lib/assert-depth.js
+@@ -0,0 +1,18 @@
++'use strict';
++
++// Validate iteratively before the upstream recursive walkers execute.
++module.exports = ast => {
++  const pending = [[ast, 0]];
++  const seen = new Set();
++  while (pending.length) {
++    const [node, depth] = pending.pop();
++    if (!node || typeof node !== 'object') continue;
++    if (depth > 64 || seen.has(node)) {
++      throw new RangeError('Panta: brace AST exceeds nesting limit or contains cycles');
++    }
++    seen.add(node);
++    if (Array.isArray(node.nodes)) {
++      for (const child of node.nodes) pending.push([child, depth + 1]);
++    }
++  }
++};

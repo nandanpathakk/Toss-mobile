@@ -1,0 +1,61 @@
+import React from 'react';
+import { type StyleProp, type TextStyle } from 'react-native';
+
+import { Bleed } from './bleed';
+import { Box } from './box';
+import { type TextColor } from './palettes';
+import { Text, type TextSize, type TextWeight } from './text';
+import { type CustomColor } from './use-foreground-color';
+
+type TextIconProps = {
+  align?: 'center' | 'left' | 'right';
+  children: string | (string | null)[] | React.ReactNode;
+  color: TextColor | CustomColor;
+  containerSize?: number;
+  height?: number;
+  hitSlop?: number;
+  opacity?: number;
+  size: TextSize;
+  textStyle?: StyleProp<TextStyle>;
+  weight: TextWeight;
+  width?: number;
+};
+
+export const TextIcon = ({
+  align = 'center',
+  children,
+  color,
+  containerSize = 16,
+  height,
+  hitSlop,
+  opacity,
+  size,
+  textStyle,
+  weight,
+  width,
+}: TextIconProps) => {
+  // Prevent wide icons from being clipped
+  const extraHorizontalSpace = 8;
+
+  return (
+    <Bleed
+      horizontal={{ custom: (hitSlop || 0) + extraHorizontalSpace }}
+      vertical={hitSlop ? { custom: hitSlop } : '6px'}
+      space={hitSlop ? { custom: hitSlop } : undefined}
+    >
+      <Box
+        alignItems="center"
+        height={{ custom: height || containerSize }}
+        justifyContent="center"
+        marginHorizontal={hitSlop ? { custom: hitSlop } : undefined}
+        marginVertical={{ custom: hitSlop || 6 }}
+        style={{ opacity }}
+        width={{ custom: (width || containerSize) + extraHorizontalSpace * 2 }}
+      >
+        <Text align={align} color={color} size={size} style={textStyle} weight={weight}>
+          {children}
+        </Text>
+      </Box>
+    </Bleed>
+  );
+};
