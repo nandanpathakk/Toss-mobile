@@ -1,31 +1,92 @@
+![Toss — Back your view. Prediction markets, made clear.](docs/images/toss-banner.png)
+
 # Toss
 
-A React Native prediction-market app built on Panta. Browse live markets, inspect prices and activity, sign in with Privy, view wallet balances and positions, and prepare primary, peer-to-peer, and market-creation transactions.
+**Prediction markets, made clear. Built on Panta.**
 
-The app uses Panta's live API through a local Node gateway. API failures remain visible; failed requests never turn into sample markets or simulated successful trades. Primary-market requests may still fail upstream.
+Toss brings prediction markets to iOS and Android in a focused, native mobile experience. Discover markets across crypto, sports, politics and more, explore YES and NO prices, and follow the events you care about. Sign in with Privy to access your wallet, track positions and take your view into a market.
+
+## Inside the app
+
+<table>
+  <tr>
+    <th>Discover markets</th>
+    <th>Explore the details</th>
+    <th>Create a market</th>
+  </tr>
+  <tr>
+    <td><img src="docs/images/discover.png" alt="Toss Discover screen with search, categories and live outcome prices" width="260" /></td>
+    <td><img src="docs/images/market-detail.png" alt="Market detail screen with YES and NO prices and purchase actions" width="260" /></td>
+    <td><img src="docs/images/create-market.png" alt="Market creation screen with a question, category and cover image" width="260" /></td>
+  </tr>
+</table>
+
+- **Find your next market.** Search the catalog, browse categories and filter by market phase.
+- **Understand the odds.** Inspect outcome prices, volume, timelines, resolution rules and market activity.
+- **Back your view.** Choose YES or NO and review primary-market purchases or peer-to-peer orders before signing.
+- **Keep your positions in view.** Access wallet balances and portfolio positions through your Privy account.
+- **Ask your own question.** Build a market with a guided flow for the question, rules, timeline and cost review. Save drafts and return to them later.
+
+## Built with
+
+| Layer          | Technology                                |
+| -------------- | ----------------------------------------- |
+| Mobile         | React Native 0.81 · React 19 · TypeScript |
+| Markets        | Panta API through a Node.js gateway       |
+| Authentication | Privy                                     |
+
+The mobile app connects to a gateway that handles authenticated Panta requests. Your Panta API key stays on the server; the app uses only public configuration.
 
 ## Run locally
 
-Requirements: Node 22.11+ (22.x) or 24.x, Bun 1.3.14, and the native tools for your platform. iOS needs macOS, Xcode, Ruby 3.4+ and CocoaPods 1.16.2. Android needs JDK 17, Android Studio and an installed SDK.
+### Requirements
+
+| Tool    | Version / setup                                     |
+| ------- | --------------------------------------------------- |
+| Node.js | 22.11+ within 22.x, or 24.x                         |
+| Bun     | 1.3.14                                              |
+| iOS     | macOS, Xcode, Ruby 3.4+ and CocoaPods 1.16.2        |
+| Android | JDK 17, Android Studio and an installed Android SDK |
+| Panta   | Your own API key                                    |
+
+### 1. Install and configure
+
+From the repository root:
 
 ```sh
 bun install --frozen-lockfile
 cp .env.example .env.panta-server.local
 ```
 
-Add your own `PANTA_API_KEY=pk_live_...` to `.env.panta-server.local`. This ignored file is read only by the gateway. No Panta credential belongs in the mobile app.
+Set your Panta key in `.env.panta-server.local`:
 
-Start these in separate terminals:
+```dotenv
+PANTA_API_KEY=pk_live_your_key_here
+```
+
+This file is ignored by Git and read only by the gateway. Keep the key out of mobile source and public configuration.
+
+### 2. Start the gateway and Metro
+
+Run each command in a separate terminal from the repository root. Keep both running while using the app.
+
+**Panta gateway**
 
 ```sh
 bun run catalog:gateway
 ```
 
+**Metro bundler**
+
 ```sh
 bun run start
 ```
 
-For iOS:
+### 3. Launch the app
+
+#### iOS
+
+Install the native dependencies and launch the simulator:
 
 ```sh
 bundle install
@@ -35,9 +96,17 @@ cd ..
 bun run ios
 ```
 
-The iOS command defaults to the iPhone 17 Pro simulator; select an installed simulator with the React Native CLI if needed. The workspace and internal native registration retain the Rainbow name.
+The default simulator is **iPhone 17 Pro**. To use another installed simulator:
 
-For Android, start an emulator or connect a device, then forward the development ports:
+```sh
+bunx react-native run-ios --simulator="Your simulator name"
+```
+
+The Xcode workspace and internal native registration use the name `Rainbow`.
+
+#### Android
+
+Start an emulator or connect a device with USB debugging enabled, then run:
 
 ```sh
 adb reverse tcp:8081 tcp:8081
@@ -45,34 +114,48 @@ adb reverse tcp:8787 tcp:8787
 bun run android
 ```
 
-Debug builds use `http://127.0.0.1:8787`. A physical iPhone needs a separately deployed HTTPS gateway. Configure its public URL in `src/lib/panta-api.ts`. Release builds require this URL too. The included local gateway binds only to loopback and must not be exposed publicly as-is.
+### Gateway and authentication configuration
 
-Privy public app/client IDs live in `src/features/panta/privy-config.ts` and `src/lib/panta-account-verification.ts`; they must refer to the same Privy app. For an independent deployment, use your own Privy app, native identifiers and dashboard configuration. Optional Phantom integration remains disabled until `wallet-config.ts` has a public project URL; its cluster is devnet.
+Local debug builds connect to `http://127.0.0.1:8787`. For a physical iPhone or a release build, set `deployedGatewayUrl` in [`src/lib/panta-api.ts`](src/lib/panta-api.ts) to your deployed HTTPS gateway. The included local gateway binds to loopback; use a secured server deployment for public access.
 
-## Verify
+For your own Privy deployment, configure your public app/client IDs in both:
+
+- [`src/features/panta/privy-config.ts`](src/features/panta/privy-config.ts)
+- [`src/lib/panta-account-verification.ts`](src/lib/panta-account-verification.ts)
+
+Both files must reference the same Privy app. Configure your native identifiers and allowed redirects in the Privy dashboard to match your build.
+
+## Project structure
+
+```text
+src/features/panta/   Market discovery, trading, creation, wallet and portfolio
+src/lib/panta-*.ts   API clients, account verification and transaction logic
+src/design/         Design tokens, themes and styling
+src/components/     Shared interface components
+src/app/            App startup and root interface
+tools/panta-gateway/ Server-side Panta gateway
+tools/panta-wallet/  Wallet and transaction tests
+tools/security/      Security checks
+ios/                 iOS native project
+android/             Android native project
+```
+
+## Checks
 
 ```sh
 bun run lint
 ```
 
-This checks formatting, TypeScript, configuration JavaScript, ESLint, generated design files, both platform dependency graphs, and gateway/wallet/security tests. Fixture data is confined to automated tests. Passing tests does not establish that a funded transaction completed on a device.
+Runs formatting, TypeScript, configuration JavaScript, ESLint, generated design checks, dependency checks for both platforms, and gateway, wallet and security tests.
 
-## Prepare a new submission repository
-
-```sh
-bun run submission:export
-```
-
-This creates `submission` from the current working tree, including uncommitted changes. It includes the app's source dependency closure for both platforms, native projects, required patches, gateway, tests and setup documentation. It excludes old Rainbow application source outside that closure, pitch recordings, design reviews, the marketing site, dependencies, build products, local server credentials and Git history. The upstream license is preserved.
-
-The exporter refuses to overwrite a destination. To repeat it, supply a fresh path:
+To run the test suites individually:
 
 ```sh
-bun run submission:export -- submission-v2
+bun run test:catalog
+bun run test:wallet
+bun run test:security
 ```
 
-Use the exported directory as the starting point for your new remote repository. The exporter does not initialize Git, commit or push. See [submission notes](docs/submission.md) for the remaining deployment and device checks.
+## License and attribution
 
-## Attribution
-
-Toss is derived from Rainbow's React Native codebase and retains parts of its design system and native scaffolding. The upstream GPL-3.0 license is included in `LICENSE`; retain the license and applicable notices when redistributing the source.
+Toss is derived from Rainbow’s React Native codebase and retains parts of its design system and native scaffolding. The source is distributed under [GPL-3.0](LICENSE). Retain the license and applicable upstream notices when redistributing it.
